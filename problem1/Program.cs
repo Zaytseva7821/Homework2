@@ -3,11 +3,15 @@
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
+int MakePositive(int arg)
+{
+   return arg * -1;
+}
 
 System.Console.WriteLine("Введите трехзначное число");
 int num = Convert.ToInt32(System.Console.ReadLine());
 if (num < 0)
-num = num * -1;
+num = MakePositive(num);
 if (num < 100 || num > 999)
 {
     System.Console.WriteLine("Введено некорректное число");

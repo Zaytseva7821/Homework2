@@ -5,11 +5,15 @@
 // 78 -> третьей цифры нет
 
 // 32679 -> 6
+int MakePositive(int arg)
+{
+   return arg * -1;
+}
 
 System.Console.WriteLine("Введите число");
 int num = Convert.ToInt32(System.Console.ReadLine());
 if (num < 0)
-num = num * -1;
+num = MakePositive(num);
 if (num < 100 )
 {
     System.Console.WriteLine("Третьей цифры нет");
