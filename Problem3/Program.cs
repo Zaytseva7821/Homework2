@@ -5,15 +5,25 @@
 // 7 -> да
 // 1 -> нет
 
+bool DayOff(int arg)
+{
+    if (arg < 6)
+    {
+        return false;}
+    else
+    {
+        return true;
+    }
+}
+
+
 System.Console.WriteLine("Введите номер дня недели");
 int day = Convert.ToInt32(System.Console.ReadLine());
 if (day > 7)
-System.Console.WriteLine("Некорректный номер");
-if (day < 6)
 {
-    System.Console.WriteLine("Нет");
+    System.Console.WriteLine("Некорректный номер");
 }
 else
 {
-    System.Console.WriteLine("Да");
+    System.Console.WriteLine(DayOff(day));
 }
